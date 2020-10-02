@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = +prompt('Enter a num:');
+
+    function isFibonacci(num) {
+        let arr = [];
+        let a = 0;
+        let b = 1;
+        for (let i = 0; i < num; i++) {
+            arr.push(a);
+            arr.push(b);
+            let nextNum = a + b;
+            a = b;
+            b = nextNum;
+        }
+        return arr.indexOf(num)!==-1;
+    }
+    document.write(`${isFibonacci(x)}`);
+</script>
+</body>
+</html>
