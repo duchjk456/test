@@ -7,12 +7,14 @@
 <body>
 <script>
     let x = +prompt('Enter a number of integer:');
-    let arrCheck = [1, 4, -5, 3, 6, 7, 8];
+    let arrCheck = [1, 4, -5, 3,3, 6, 7, 8];
 
     function tryRemoveFromArray(arr, num) {
         let index = arr.indexOf(num);
-        if (index !== -1) {
-            arr.splice(index, 1);
+        for (let i = 0; i < num; i++) {
+            if (index !== -1) {
+                arr.splice(index, 1);
+            }
         }
         return arr;
     }
